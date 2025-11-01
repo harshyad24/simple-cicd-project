@@ -11,7 +11,7 @@ app.get('/health', (req, res) => {
 
 // Simple API endpoints
 app.get('/api/hello', (req, res) => {
-  res.json({ message: 'Hello from CI/CD project!' });
+  res.json({ message: 'Hello from CI/CD project! Automation is awesome!' });
 });
 
 app.get('/api/users', (req, res) => {

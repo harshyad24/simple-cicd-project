@@ -16,7 +16,7 @@ describe('API Endpoints', () => {
       const res = await request(app).get('/api/hello');
       expect(res.statusCode).toBe(200);
       expect(res.body).toHaveProperty('message');
-      expect(res.body.message).toBe('Hello from CI/CD project!');
+      expect(res.body.message).toBe('Hello from CI/CD project! Automation is awesome!');
     });
   });
 

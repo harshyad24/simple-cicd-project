@@ -96,6 +96,15 @@ describe('API Endpoints', () => {
     });
   });
 
+  describe('GET /api/time', () => {
+  it('should return current time', async () => {
+    const res = await request(app).get('/api/time');
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toHaveProperty('message', 'Current time');
+    expect(res.body).toHaveProperty('time');
+  });
+});
+
   describe('404 Handler', () => {
     it('should return 404 for unknown routes', async () => {
       const res = await request(app).get('/unknown/route');

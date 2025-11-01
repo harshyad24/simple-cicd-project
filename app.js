@@ -51,6 +51,13 @@ app.post('/api/calculate', (req, res) => {
   res.json({ result });
 });
 
+app.get('/api/time', (req, res) => {
+  res.json({ 
+    message: 'Current time',
+    time: new Date().toLocaleString()
+  });
+});
+
 // 404 handler
 app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
